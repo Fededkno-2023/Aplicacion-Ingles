@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FFFBF5;
+    color: #001c3b;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, .font-headline {
+    font-family: 'Comfortaa', cursive, sans-serif;
+  }
+}
+
+/* Tactile push toy button effects */
+.tactile-btn-blue {
+  background-color: #3b82f6;
+  color: white;
+  box-shadow: 0 4px 0 #1d4ed8;
+  transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tactile-btn-blue:hover {
+  background-color: #2563eb;
+}
+.tactile-btn-blue:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #1d4ed8;
+}
+
+.tactile-btn-green {
+  background-color: #10b981;
+  color: white;
+  box-shadow: 0 4px 0 #059669;
+  transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tactile-btn-green:hover {
+  background-color: #059669;
+}
+.tactile-btn-green:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #059669;
+}
+
+.tactile-btn-yellow {
+  background-color: #fbbf24;
+  color: #765700;
+  box-shadow: 0 4px 0 #d97706;
+  transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tactile-btn-yellow:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #d97706;
+}
+
+.tactile-btn-secondary {
+  background-color: #ffffff;
+  color: #1e3a5f;
+  border: 2px solid #cbd5e1;
+  box-shadow: 0 4px 0 #94a3b8;
+  transition: all 0.12s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tactile-btn-secondary:hover {
+  background-color: #f8fafc;
+}
+.tactile-btn-secondary:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #94a3b8;
+}
+
+.tactile-card {
+  box-shadow: 0 8px 24px -4px rgba(30, 58, 95, 0.08);
+}
+
+.tactile-option-card {
+  transition: all 0.15s ease;
+  box-shadow: 0 3px 0 #e2e8f0;
+}
+.tactile-option-card:hover {
+  box-shadow: 0 5px 0 #cbd5e1;
+  transform: translateY(-1px);
+}
+.tactile-option-card:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #cbd5e1;
+}
+
+/* Winding dashed line for map */
+.dashed-trail {
+  stroke-dasharray: 8, 8;
+  animation: dashMove 30s linear infinite;
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+/* Material symbols */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
