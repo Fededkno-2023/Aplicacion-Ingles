@@ -24,7 +24,10 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeScreen, onSelectTab 
       : (activeScreen as ScreenTab);
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 w-full max-w-[440px] mx-auto bg-white/95 backdrop-blur-md border-t-2 border-[#d5e3ff] shadow-lg rounded-t-2xl px-2 py-1.5 flex justify-around items-center">
+    <nav
+      aria-label="Navegación principal"
+      className="fixed bottom-0 left-0 right-0 z-40 w-full max-w-[440px] mx-auto bg-white/95 backdrop-blur-md border-t-2 border-[#d5e3ff] shadow-lg rounded-t-2xl px-2 py-2 flex justify-around items-center"
+    >
       {tabs.map((tab) => {
         const isActive = activeTab === tab.id;
         return (
@@ -34,19 +37,20 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeScreen, onSelectTab 
               sound.playClick();
               onSelectTab(tab.id);
             }}
-            className={`flex flex-col items-center justify-center transition-all duration-150 py-1 px-3 rounded-xl min-w-[72px] ${
+            className={`min-h-[52px] min-w-[76px] flex flex-col items-center justify-center transition-all duration-150 py-1.5 px-3 rounded-2xl touch-manipulation ${
               isActive
                 ? 'bg-[#64f9bc] text-[#005137] border-b-4 border-[#006c4b] -translate-y-0.5 shadow-xs font-bold'
-                : 'text-[#424754] hover:bg-[#e7eeff] hover:text-[#0058be] font-semibold'
+                : 'text-[#424754] hover:bg-[#e7eeff] hover:text-[#0058be] font-semibold active:scale-95'
             }`}
+            aria-current={isActive ? 'page' : undefined}
           >
             <span
-              className="material-symbols-outlined text-[23px]"
+              className="material-symbols-outlined text-[26px]"
               style={isActive ? { fontVariationSettings: "'FILL' 1" } : undefined}
             >
               {tab.icon}
             </span>
-            <span className="text-[12px] tracking-tight mt-0.5">{tab.label}</span>
+            <span className="text-[12px] tracking-tight mt-0.5 font-bold">{tab.label}</span>
           </button>
         );
       })}

@@ -2,5 +2,7 @@
   "name": "English Adventure Kids",
   "description": "Gamified English learning journey for kids with Buddy the Fox, interactive practice missions, and milestone rewards.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
